@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barefoot Selling · Proposal · Time Assist</title>
+<style>
+:root{
+  --primary:#662D91; --dark:#3C1858; --light:#F0E6F6;
+  --ink:#1f1a24; --muted:#5c5566; --line:#e7dff0;
+  --bg:#faf8fc; --white:#ffffff;
+  --warn-bg:#fff4e6; --warn-line:#f0b060;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  line-height:1.62;-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header{background:linear-gradient(135deg,var(--primary),var(--dark));color:#fff;padding:44px 0 38px}
+header h1{margin:0 0 10px;font-size:31px;line-height:1.22;font-weight:700}
+header p.lede{margin:0;font-size:17px;opacity:.94;max-width:62ch}
+.meta{margin-top:18px;font-size:14px;opacity:.85}
+nav.tabs{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+nav.tabs .wrap{display:flex;gap:4px}
+.tab{background:none;border:0;border-bottom:3px solid transparent;padding:15px 18px;
+  font-size:15px;font-weight:600;color:var(--muted);cursor:pointer;font-family:inherit}
+.tab[aria-selected="true"]{color:var(--primary);border-bottom-color:var(--primary)}
+.tab:focus-visible{outline:2px solid var(--primary);outline-offset:-2px}
+main{padding:30px 0 70px}
+.panel{display:none}
+.panel.active{display:block}
+details.sec{background:var(--white);border:1px solid var(--line);border-radius:10px;margin-bottom:12px;overflow:hidden}
+details.sec>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;gap:13px;font-weight:600;font-size:16.5px}
+details.sec>summary::-webkit-details-marker{display:none}
+details.sec>summary:focus-visible{outline:2px solid var(--primary);outline-offset:-2px}
+.n{background:var(--primary);color:#fff;width:27px;height:27px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;font-size:13.5px;flex:0 0 27px}
+.chev{margin-left:auto;color:var(--primary);transition:transform .18s;font-size:13px}
+details.sec[open]>summary .chev{transform:rotate(90deg)}
+.body{padding:2px 18px 20px 58px}
+.body p{margin:0 0 14px}
+.body ul{margin:0 0 14px;padding-left:20px}
+.body li{margin-bottom:7px}
+h3.mini{margin:22px 0 9px;font-size:15px;color:var(--dark)}
+table{width:100%;border-collapse:collapse;margin:0 0 16px;font-size:14.5px}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--light);font-weight:600;color:var(--dark)}
+.box{border-radius:8px;padding:13px 16px;margin:0 0 16px;font-size:15px}
+.box p:last-child{margin-bottom:0}
+.tip{background:var(--light);border-left:4px solid var(--primary)}
+.warn{background:var(--warn-bg);border-left:4px solid var(--warn-line)}
+.price{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:0 0 18px}
+.pcard{background:var(--white);border:2px solid var(--line);border-radius:10px;padding:18px}
+.pcard.lead{border-color:var(--primary)}
+.pcard .lab{font-size:14px;color:var(--muted);margin-bottom:5px}
+.pcard .fig{font-size:26px;font-weight:700;color:var(--primary);line-height:1.2}
+.pcard .sub{font-size:13.5px;color:var(--muted);margin-top:5px}
+.flow{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:6px 0;margin:0 0 16px}
+.step{display:flex;gap:13px;padding:11px 16px;border-bottom:1px solid var(--line)}
+.step:last-child{border-bottom:0}
+.step .sn{background:var(--light);color:var(--dark);font-weight:700;width:26px;height:26px;border-radius:6px;
+  display:inline-flex;align-items:center;justify-content:center;font-size:13px;flex:0 0 26px}
+.step .st{font-size:15px}
+.step .st strong{display:block;color:var(--dark)}
+.videowrap{position:relative;padding-bottom:56.25%;height:0;border-radius:10px;overflow:hidden;margin:0 0 20px;background:#000}
+.videowrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:14px;background:var(--white)}
+@media (max-width:620px){
+  header h1{font-size:25px}
+  .body{padding:2px 16px 18px 16px}
+  .tab{padding:13px 12px;font-size:14px}
+}
+@media print{
+  nav.tabs{display:none}
+  .panel{display:block !important}
+  details.sec{break-inside:avoid}
+  details.sec>summary .chev{display:none}
+}
+</style>
+</head>
+<body>
+
+
+<header>
+  <div class="wrap">
+    <h1>A CRM that runs on your own process</h1>
+    <p class="lede">Every referral captured in under a minute, every renewal conversation on time, and the Barefoot Selling stages built into the system itself.</p>
+    <div class="meta">Prepared for Mike Manaley &nbsp;·&nbsp; Barefoot Selling</div>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="Sections">
+  <div class="wrap">
+    <button class="tab" id="tab-proposal" role="tab" aria-selected="true" aria-controls="panel-proposal">Proposal</button>
+    <button class="tab" id="tab-call" role="tab" aria-selected="false" aria-controls="panel-call">Demo Call</button>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+
+  <section class="panel active" id="panel-proposal" role="tabpanel" aria-labelledby="tab-proposal">
+
+    <details class="sec" open>
+      <summary><span class="n">1</span> Where things stand today<span class="chev">▶</span></summary>
+      <div class="body">
+        <p>You run two businesses side by side. The broking business has just over 350 clients, took 192 referrals in the last twelve months, and has grown 32%, 48% and 60% over the last three years. Barefoot Selling is where you want to spend more of your time, with the online course, the book and the podcast all under way.</p>
+        <p>Acturis handles quoting, policies and claims, and it does that job. What sits around it has no home. Referrals arrive through BNI, WhatsApp and phone calls. Follow-ups live in your diary and your memory. The email telling a client their renewal is coming up goes out by hand, from Charlotte.</p>
+        <p>You were honest about how that plays out. The opportunities worth five grand get remembered. The ones worth a hundred pounds slip, and a referral who doesn't ring you back gets forgotten. If you were out of action tomorrow, nobody could pick up where you left off.</p>
+        <div class="box tip">
+          <p>You've used HubSpot, Pipedrive, Trello and a little Salesforce, always because someone else needed the data. This would be the first system set up for you.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="sec">
+      <summary><span class="n">2</span> What we are proposing<span class="chev">▶</span></summary>
+      <div class="body">
+        <p>Capsule CRM, set up around Acturis rather than instead of it. Acturis stays the system for quoting, policies and claims. Capsule covers everything before the quote and everything after the sale: who you know, who introduced them, what you last talked about, and what needs doing next.</p>
+        <table>
+          <tr><th>Tool</th><th>What it does for you</th></tr>
+          <tr><td>Capsule CRM</td><td>Contacts with context, a sales pipeline for each business, customer care, tasks and goals</td></tr>
+          <tr><td>Transpond (optional)</td><td>Email to your clients from the same data, starting with the renewal email Charlotte currently sends by hand</td></tr>
+        </table>
+        <p>The demo on 29 September was built from our first conversation. You said it wasn't a million miles away from perfect, so the real build starts there rather than from a blank page.</p>
+      </div>
+    </details>
+
+    <details class="sec">
+      <summary><span class="n">3</span> Built on the Barefoot Selling process<span class="chev">▶</span></summary>
+      <div class="body">
+        <p>The system uses your language rather than Capsule's defaults.</p>
+        <ul>
+          <li>Contacts are Lead, Prospect, Live, Lapsed or Networking, as you define them</li>
+          <li>The sales stages are Engagement, Meeting agreed, Killer questions and Solution presented</li>
+          <li>The killer questions sit on each opportunity as their own section: current insurer, renewal date, broker relationship and cover needed</li>
+          <li>Every contact records who referred them and the date of your last one to one</li>
+          <li>After the sale, a customer care checklist takes a client from neutral to advocate</li>
+        </ul>
+        <p>You said it follows your exact model. You also said there are a few things you want to nuance once you've thought about them. Those go into the discovery session before anything is built.</p>
+      </div>
+    </details>
+
+    <details class="sec">
+      <summary><span class="n">4</span> Getting a referral in, fast<span class="chev">▶</span></summary>
+      <div class="body">
+        <p>Your rule was that capturing someone had to take under a minute. In the demo, adding a person took about 20 seconds: name, company, phone, email, who referred them, and a note of what you talked about.</p>
+        <ul>
+          <li>From your inbox, the Capsule add-on for Outlook or Gmail adds the sender as a contact and saves the email conversation to their record</li>
+          <li>From WhatsApp, the message is pasted into a note on the contact, where it is timestamped</li>
+          <li>Away from the desk, the mobile app does the same from your phone</li>
+        </ul>
+        <p>Referred by builds the chain as you go. Open anyone and you can see who introduced them, and who introduced that person, all the way back to where it started.</p>
+      </div>
+    </details>
+
+    <details class="sec">
+      <summary><span class="n">5</span> Renewals and follow-ups you don't have to remember<span class="chev">▶</span></summary>
+      <div class="body">
+        <p>On the call you mentioned a referral that came in that day, for a conversation in February about a renewal in April. At the moment that becomes a diary note you can't see from here.</p>
+        <p>In Capsule it becomes a dated task on that person's record, with the notes from the first conversation attached. When February comes, it appears in your calendar with the context beside it. Anything missed shows as overdue until it is dealt with.</p>
+        <p>For existing clients, a renewal checklist runs on each client record: a half-year review, a pre-renewal call and the renewal itself. With retention at 96 to 98%, renewals don't need to sit in a pipeline. The tasks do the job.</p>
+      </div>
+    </details>
+
+    <details class="sec">
+      <summary><span class="n">6</span> What goes in the pipeline, and what it's worth<span class="chev">▶</span></summary>
+      <div class="body">
+        <p><strong>New business only.</strong> Renewals stay on the client record as tasks, so the insurance pipeline holds new business and what you see there is genuinely new income.</p>
+        <p><strong>Income, not premium.</strong> Each opportunity carries one value. You record the income you expect from it, for example £250 on a £1,000 policy, and refine it as the deal moves through the stages. Each stage carries a probability, so Capsule also shows a projected value across the whole pipeline.</p>
+        <p>That matters for your targets. At the moment you hear where you stand against the group's income target about twice a year. With a goal on your home screen, you see it every day. Goals and opportunities need to use the same measure, which is another reason to settle on income.</p>
+      </div>
+    </details>
+
+    <details class="sec">
+      <summary><span class="n">7</span> Renewal emails without the manual work<span class="chev">▶</span></summary>
+      <div class="body">
+        <p>The email that tells a client their renewal is coming up and asks them to book a meeting goes out one at a time. Transpond, Capsule's sister email tool, sends it from the same data.</p>
+        <ul>
+          <li>Your client list stays in Capsule. Transpond is only the tool that sends</li>
+          <li>You filter in Capsule, for example every client renewing in December, and send to that group</li>
+          <li>Once it is set up, the renewal email can be automated rather than sent one by one</li>
+        </ul>
+        <p>You said the system is starting to creak under the number of referrals and the size of the book. Automating the routine emails is how the service stays where it is as both grow.</p>
+      </div>
+    </details>
+
+    <details class="sec">
+      <summary><span class="n">8</span> Your client data<span class="chev">▶</span></summary>
+      <div class="body">
+        <p>Your renewal list, with every existing client and their renewal date, is imported in bulk at the start. Nobody retypes it.</p>
+        <p>The data in Capsule is yours. It can be exported at any time as a spreadsheet, so your client list is never held only inside someone else's system. What, if anything, comes out of Acturis beyond your renewal list is for you and the group to agree.</p>
+      </div>
+    </details>
+
+    <details class="sec">
+      <summary><span class="n">9</span> What it costs<span class="chev">▶</span></summary>
+      <div class="body">
+        <h3 class="mini">The work</h3>
+        <div class="price">
+          <div class="pcard lead">
+            <div class="lab">Setup and training</div>
+            <div class="fig">£500</div>
+            <div class="sub">Discovery session, the build, bulk import of your renewal list, and a recorded walkthrough</div>
+          </div>
+          <div class="pcard">
+            <div class="lab">Transpond setup (optional)</div>
+            <div class="fig">£198</div>
+            <div class="sub">Two sessions at £99 each, to connect it and set up the renewal email</div>
+          </div>
+        </div>
+        <p>These are fees for the work. The software is paid for separately, directly to the providers.</p>
+        <h3 class="mini">The tools</h3>
+        <table>
+          <tr><th>Tool</th><th>Indicative cost</th></tr>
+          <tr><td>Capsule CRM</td><td>£32 per user per month. A pipeline for each business needs this level. Capsule itself starts at £17</td></tr>
+          <tr><td>Transpond</td><td>A separate subscription, from £19 per month</td></tr>
+        </table>
+        <div class="box tip">
+          <p>Capsule is priced per user, so if Charlotte works in it too, that is two users.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="sec">
+      <summary><span class="n">10</span> How it runs<span class="chev">▶</span></summary>
+      <div class="body">
+        <table>
+          <tr><th>Stage</th><th>What happens</th></tr>
+          <tr><td>Discovery session</td><td>Your processes in detail, including the parts of the demo you want to change</td></tr>
+          <tr><td>Build</td><td>Capsule set up for both businesses, with your renewal list imported</td></tr>
+          <tr><td>Walkthrough</td><td>A recorded session showing what has been built, how, and how to change it yourself</td></tr>
+          <tr><td>Transpond, if chosen</td><td>Two sessions to connect it and set up the renewal email</td></tr>
+        </table>
+        <p>Charlotte is welcome at all of them, since she handles much of the admin. Every session is recorded, so either of you can go back to it.</p>
+      </div>
+    </details>
+
+    <details class="sec">
+      <summary><span class="n">11</span> Beyond your own setup<span class="chev">▶</span></summary>
+      <div class="body">
+        <p>This started as a conversation about your clients, and it comes back to them. You said the biggest worry after training a sales team is the phone call saying the method doesn't work. A CRM that follows the Barefoot Selling stages leaves the method behind after you've gone, and shows which boxes didn't get ticked.</p>
+        <p>For a client with a team, and data spread across spreadsheets or an old CRM, the three-month implementation is £2,700, payable at £900 a month, and covers consolidating the data and training the team. Referrals can run both ways: your clients who need a system set up, and Time Assist clients on Capsule who need help with their sales process.</p>
+        <p>That is a separate conversation and not part of this proposal.</p>
+      </div>
+    </details>
+
+    <details class="sec">
+      <summary><span class="n">12</span> What is not included<span class="chev">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Quoting, policies and claims.</strong> They stay in Acturis.</li>
+          <li><strong>Financial reporting.</strong> Capsule records one value per opportunity. Premium, income and how it is split stay in Acturis and your accounts.</li>
+          <li><strong>A WhatsApp connection.</strong> WhatsApp messages go into Capsule by copy and paste.</li>
+          <li><strong>The subscriptions.</strong> Capsule and Transpond are paid directly to them.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="sec">
+      <summary><span class="n">13</span> Next steps<span class="chev">▶</span></summary>
+      <div class="body">
+        <p>The next call is on Tuesday 20 October at 9am, ideally with Charlotte. You mentioned you might ring before then to get things moving, which is welcome.</p>
+        <h3 class="mini">Useful to have before then</h3>
+        <ul>
+          <li>The parts of the demo you would change, while they are fresh</li>
+          <li>Your renewal list, so its format can be checked</li>
+          <li>How many people will use Capsule</li>
+          <li>Whether you want the Transpond renewal email from the start</li>
+        </ul>
+      </div>
+    </details>
+
+  </section>
+
+  <section class="panel" id="panel-call" role="tabpanel" aria-labelledby="tab-call">
+
+    <div class="videowrap">
+      <iframe data-src="https://www.loom.com/embed/e71426d647b2489babe7745b47ef00a8" allowfullscreen title="Barefoot Selling Capsule demo, 29 September 2026"></iframe>
+    </div>
+
+    <details class="sec" open>
+      <summary><span class="n">1</span> What we covered<span class="chev">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li>How Capsule's contacts, pipeline and projects link together</li>
+          <li>Adding a person, and saving an email to a contact from the inbox</li>
+          <li>The referral chain, pinned notes and the last one to one date</li>
+          <li>Both pipelines, marking a deal won, and the customer care board</li>
+          <li>Tasks, the calendar, and the customer care checklist</li>
+          <li>Reporting, conversion and goals</li>
+          <li>Cost, and how the implementation works</li>
+          <li>Transpond for the renewal email</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="sec">
+      <summary><span class="n">2</span> The points that shaped this proposal<span class="chev">▶</span></summary>
+      <div class="body">
+        <p><strong>The value is income.</strong> Premium is the only figure you have before the quote, but income is what the group targets you on. Recording expected income per opportunity, and refining it, keeps the pipeline and your goals on the same measure.</p>
+        <p><strong>Renewals are not opportunities.</strong> With retention at 96 to 98%, new business is what needs nurturing. Renewal care runs on the client record with its own checklist: half-year review, pre-renewal and renewal.</p>
+        <p>For insurance, aftercare can move onto the client record too, which leaves the Customer care board free for coaching clients.</p>
+        <p>The renewal email is the first thing worth automating, because referral volume and the size of the book are both growing and it currently goes out by hand.</p>
+        <p>The killer questions and the stage names fit the Barefoot Selling mantra closely enough that the same build could be left with your own clients, to show whether the method is being followed.</p>
+      </div>
+    </details>
+
+  </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">Prepared by Time Assist for Mike Manaley. Any questions before 20 October, email Jaanika at j.okk [at] timeassist.co.uk</div>
+</footer>
+
+<script>
+(function(){
+  function loadVideos(){
+    document.querySelectorAll('.panel.active iframe[data-src]').forEach(function(f){
+      var d=f.closest('details');
+      if(d && !d.open){return;}
+      if(!f.getAttribute('src')){f.setAttribute('src',f.getAttribute('data-src'));}
+    });
+  }
+  var tabs=document.querySelectorAll('.tab');
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(x){
+        x.setAttribute('aria-selected','false');
+        var p=document.getElementById(x.getAttribute('aria-controls'));
+        if(p){p.classList.remove('active');}
+      });
+      t.setAttribute('aria-selected','true');
+      var panel=document.getElementById(t.getAttribute('aria-controls'));
+      if(panel){panel.classList.add('active');}
+      window.scrollTo({top:0,behavior:'smooth'});
+      loadVideos();
+    });
+  });
+  document.querySelectorAll('details.sec').forEach(function(d){d.addEventListener('toggle',loadVideos);});
+  loadVideos();
+})();
+</script>
+</body>
+</html>
